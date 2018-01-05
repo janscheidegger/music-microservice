@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: cd-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka
+
+server:
+  port: 2222

@@ -1,0 +1,24 @@
+version: "2"
+services:
+  registry:
+    build: ./registry-service
+    networks:
+      - swos
+    ports:
+      - "1111:1111"
+  person:
+    build: ./cd-service
+    networks:
+      - swos
+  address:
+    build: ./artist-service
+    networks:
+      - swos
+  frontend:
+    build: ./frontend-service
+    networks:
+      - swos
+    ports:
+      - "8080:8080"
+networks:
+  swos:
