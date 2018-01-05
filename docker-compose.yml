@@ -6,11 +6,11 @@ services:
       - swos
     ports:
       - "1111:1111"
-  person:
+  cd:
     build: ./cd-service
     networks:
       - swos
-  address:
+  artist:
     build: ./artist-service
     networks:
       - swos
