@@ -11,6 +11,7 @@
     <modules>
         <module>artist-service</module>
         <module>cd-service</module>
+        <module>artist-cd-service</module>
         <module>registry-service</module>
         <module>frontend-service</module>
     </modules>
