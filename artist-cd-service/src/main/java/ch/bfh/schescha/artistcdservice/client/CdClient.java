@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @FeignClient(value = "cd-service", fallback = CdClientFallback.class)
 public interface CdClient {
-//    @RequestMapping(method = RequestMethod.GET, value = "/cds/{id}")
-//    Resource<Cd> getCd(@PathVariable("id") String id);
 
     @RequestMapping(method = RequestMethod.GET, value = "/cds")
     Resources<Cd> getCds();

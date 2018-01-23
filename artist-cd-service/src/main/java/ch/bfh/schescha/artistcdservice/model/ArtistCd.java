@@ -1,12 +1,14 @@
 package ch.bfh.schescha.artistcdservice.model;
 
+import org.springframework.hateoas.ResourceSupport;
+
 import java.time.LocalDate;
 import java.util.Collection;
 
 /**
  * Created by simon on 22.01.2018.
  */
-public class ArtistCd {
+public class ArtistCd extends ResourceSupport {
 
     private String name;
     private int members;
