@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.time.LocalDate;
 
 @Entity
 public class Cd {
@@ -17,7 +18,7 @@ public class Cd {
     private String artistId;
     private String title;
 //    @Convert(converter = LocalDateAttributeConverter.class)
-//    private LocalDate releaseDate;
+    private LocalDate releaseDate;
     private int numbersSold;
     private int duration;
 
@@ -39,13 +40,13 @@ public class Cd {
         this.title = title;
     }
 
-//    public LocalDate getReleaseDate() {
-//        return releaseDate;
-//    }
-//
-//    public void setReleaseDate(LocalDate releaseDate) {
-//        this.releaseDate = releaseDate;
-//    }
+    public LocalDate getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(LocalDate releaseDate) {
+        this.releaseDate = releaseDate;
+    }
 
     public int getNumbersSold() {
         return numbersSold;
