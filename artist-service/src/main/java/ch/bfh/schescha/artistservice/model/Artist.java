@@ -1,6 +1,7 @@
 package ch.bfh.schescha.artistservice.model;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +18,9 @@ public class Artist {
 
     private String name;
     private int members;
+
     private LocalDate creationDate;
+
     private String origin;
 
     public String getArtistId() {

@@ -1,8 +1,4 @@
 spring:
-  jackson:
-    dateFormat: com.fasterxml.jackson.databind.util.ISO8601DateFormat
-    serialization:
-      writeDatesAsTimestamps: false
   application:
     name: artist-service
 
