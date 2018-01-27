@@ -1,12 +1,15 @@
 package ch.bfh.schescha.artistcdservice.client;
 
 import ch.bfh.schescha.artistcdservice.model.Cd;
+import ch.bfh.schescha.artistcdservice.model.Song;
 import org.springframework.hateoas.Resources;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -32,6 +35,9 @@ public class CdClientFallback implements CdClient{
         cd.setTitle("-- DUMMY CD TITLE --");
         cd.setNumbersSold(0);
         cd.setReleaseDate(LocalDate.now());
+        cd.setSongs(Collections.singletonList(
+                new Song("--DUMMY ID", "DUMMY TITLE", 123)
+        ));
         return new Resources<>(cdList);
     }
 }

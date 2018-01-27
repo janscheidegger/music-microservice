@@ -3,9 +3,13 @@ package ch.bfh.schescha.cdservice.model;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Cd {
@@ -21,6 +25,9 @@ public class Cd {
     private LocalDate releaseDate;
     private int numbersSold;
     private int duration;
+
+    @OneToMany(fetch=FetchType.LAZY, mappedBy = "cdId")
+    private List<Song> songs;
 
     public String getCdId() {
         return cdId;
@@ -62,5 +69,14 @@ public class Cd {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
     }
 }
