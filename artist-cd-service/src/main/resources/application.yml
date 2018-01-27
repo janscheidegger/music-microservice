@@ -1,9 +1,5 @@
 # Spring properties
 spring:
-#  jackson:
-#    dateFormat: com.fasterxml.jackson.databind.util.ISO8601DateFormat
-#    serialization:
-#      writeDatesAsTimestamps: false
   application:
     name: artist-cd-service
 
@@ -11,15 +7,15 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://registry:1111/eureka/
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 10
 
 # Enable hystrix for feign
 feign:
-    hystrix:
-        enabled: true
+  hystrix:
+    enabled: true
 
 # HTTP Server
 server:
